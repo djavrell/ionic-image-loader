@@ -58,6 +58,8 @@ export class ImgLoader implements OnInit {
 
   private _useImg: boolean = this._config.useImg;
 
+  private _imgTag: 'img' | 'ion-img' = this._config.imgTag;
+
   /**
    * Convenience attribute to disable caching
    * @param val
@@ -191,7 +193,7 @@ export class ImgLoader implements OnInit {
       // Using <img> tag
       if (!this.element) {
         // create img element if we dont have one
-        this.element = this._renderer.createElement(this._element.nativeElement, 'img');
+        this.element = this._renderer.createElement(this._element.nativeElement, this._imgTag);
       }
 
       // set it's src

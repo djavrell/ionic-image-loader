@@ -281,6 +281,17 @@ this.imageLoaderConfig.setFileTransferOptions({
 ```
 ---
 
+#### setImgTag(tag: 'img' | 'ion-img')
+Allow you to choose between the base tag `img` and the wrapper from ionic `ion-img`
+
+Default to `img`
+
+Exemple:
+```ts
+this.imageLoaderConfig.setImgTag('img');
+```
+---
+
 # Preloading images
 ```typescript
 import { ImageLoader } from 'ionic-image-loader';

@@ -21,6 +21,8 @@ export class ImageLoaderConfig {
 
   useImg: boolean = false;
 
+  imgTag: 'img' | 'ion-img' = 'img';
+
   fallbackUrl: string;
 
   concurrency: number = 5;
@@ -111,6 +113,14 @@ export class ImageLoaderConfig {
    */
   useImageTag(use: boolean): void {
     this.useImg = use;
+  }
+
+  /**
+   * Set wich image tag to use
+   * @param image tag {string} either 'img' or 'ion-img'
+   */
+  setImgTag(tag: 'img' | 'ion-img'): void {
+    this.imgTag = tag;
   }
 
   /**
